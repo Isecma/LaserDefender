@@ -10,13 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9fa57c9272138334dbcd740ae1cdf0bd, type: 3}
-  m_Name: Wave 0
+  m_Name: Wave 2
   m_EditorClassIdentifier: 
   enemyPrefabs:
   - {fileID: 7128584332439661234, guid: 79997cfdbec8b874c8be6a4df04f0453, type: 3}
   - {fileID: 7128584332439661234, guid: 79997cfdbec8b874c8be6a4df04f0453, type: 3}
   - {fileID: 7128584332439661234, guid: 79997cfdbec8b874c8be6a4df04f0453, type: 3}
-  pathPrefab: {fileID: 1618853050573516104, guid: b9f3ddbdcb9fb6b4f90aaa765d4cac01, type: 3}
+  - {fileID: 7128584332439661234, guid: 79997cfdbec8b874c8be6a4df04f0453, type: 3}
+  - {fileID: 7128584332439661234, guid: 79997cfdbec8b874c8be6a4df04f0453, type: 3}
+  pathPrefab: {fileID: 3440660638370771175, guid: 5d93ecd9b8e8d8e4bbcd53a611f31e08, type: 3}
   moveSpeed: 5
-  minDelayTime: 0.3
+  minDelayTime: 0.2
   maxDelayTime: 1.5
