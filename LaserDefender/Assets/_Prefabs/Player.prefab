@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: -3920579536139031807}
   m_Layer: 9
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -219,8 +219,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 789b3eb5ab68e0542a95525dc579fef6, type: 3}
   - {fileID: 8300000, guid: f7fae0097c7d3294e81efd7abfc9b638, type: 3}
   useAI: 0
-  minFiringRate: 0.25
-  maxFiringRate: 0.25
+  minFiringRate: 0.2
+  maxFiringRate: 0.2
   isFiring: 0
 --- !u!82 &-3920579536139031807
 AudioSource:

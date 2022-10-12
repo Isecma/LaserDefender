@@ -77,4 +77,9 @@ public class Health : MonoBehaviour
     {
         return health;
     }
+
+    public int GetScoreValue()
+    {
+        return scoreValue;
+    }
 }
