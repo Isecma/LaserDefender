@@ -8,6 +8,7 @@ public class Shooter : MonoBehaviour
     [SerializeField] GameObject projectilePrefab;
     [SerializeField] float projectileSpeed = 10f;
     [SerializeField] float projectileLifetime = 5f;
+    [SerializeField] List<AudioClip> shotsVFXList;
 
     [Header ("AI")]
     [SerializeField] bool useAI;
@@ -49,6 +50,9 @@ public class Shooter : MonoBehaviour
     {
         while (true)
         {
+            int randomShotVFXIndex = Random.Range(0, shotsVFXList.Count);
+            AudioClip randomShotVFX = shotsVFXList[randomShotVFXIndex];
+            AudioSource.PlayClipAtPoint(randomShotVFX, transform.position);
             GameObject projectileInstance = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
             Rigidbody2D projectileRigidbody = projectileInstance.GetComponent<Rigidbody2D>();
             projectileRigidbody.velocity = transform.up * projectileSpeed;
