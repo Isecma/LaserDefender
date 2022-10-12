@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: -3920579536139031807}
   m_Layer: 9
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -187,8 +187,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71bc5dc0392a01349ae4300e07227e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayer: 1
   health: 50
+  scoreValue: 50
   hitEffect: {fileID: 7697662446795844306, guid: ac2043071ce71e64fb0dd2b2052d2b84, type: 3}
+  hitSFX: {fileID: 8300000, guid: 0abf94f041453184bb9758b5337ea818, type: 3}
   applyCameraShake: 1
 --- !u!114 &1704412374
 MonoBehaviour:
@@ -216,8 +219,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 789b3eb5ab68e0542a95525dc579fef6, type: 3}
   - {fileID: 8300000, guid: f7fae0097c7d3294e81efd7abfc9b638, type: 3}
   useAI: 0
-  minFiringRate: 0.25
-  maxFiringRate: 0.25
+  minFiringRate: 0.2
+  maxFiringRate: 0.2
   isFiring: 0
 --- !u!82 &-3920579536139031807
 AudioSource:
