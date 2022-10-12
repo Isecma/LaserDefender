@@ -50,15 +50,20 @@ public class Shooter : MonoBehaviour
     {
         while (true)
         {
-            int randomShotVFXIndex = Random.Range(0, shotsVFXList.Count);
-            AudioClip randomShotVFX = shotsVFXList[randomShotVFXIndex];
-            AudioSource.PlayClipAtPoint(randomShotVFX, transform.position);
+            PlayShootingSFX();
             GameObject projectileInstance = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
             Rigidbody2D projectileRigidbody = projectileInstance.GetComponent<Rigidbody2D>();
             projectileRigidbody.velocity = transform.up * projectileSpeed;
             Destroy(projectileInstance, projectileLifetime);
-            yield return new WaitForSeconds(Random.Range(minFiringRate,maxFiringRate));
+            yield return new WaitForSeconds(Random.Range(minFiringRate, maxFiringRate));
         }
 
+    }
+
+    void PlayShootingSFX()
+    {
+        int randomShotVFXIndex = Random.Range(0, shotsVFXList.Count);
+        AudioClip randomShotVFX = shotsVFXList[randomShotVFXIndex];
+        AudioSource.PlayClipAtPoint(randomShotVFX, transform.position);
     }
 }
