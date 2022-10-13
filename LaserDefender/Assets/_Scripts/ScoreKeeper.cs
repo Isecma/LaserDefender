@@ -6,6 +6,19 @@ public class ScoreKeeper : MonoBehaviour
 {
     int currentScore;
 
+    void Awake()
+    {
+        int numScoreKeeper = FindObjectsOfType<ScoreKeeper>().Length;
+        if (numScoreKeeper > 1)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+
     public int GetCurrentScore()
     {
         return currentScore;
